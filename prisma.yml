@@ -1,0 +1,6 @@
+endpoint: http://farga-Publi-8RKSGLKPYKX5-1168239189.us-west-2.elb.amazonaws.com
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/

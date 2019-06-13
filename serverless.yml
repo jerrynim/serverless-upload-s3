@@ -1,0 +1,16 @@
+service: serverless-file-upload
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: us-west-2
+
+functions:
+  app:
+    handler: build/handler.handler
+    events:
+      - http: ANY /
+      - http: "ANY {proxy+}"
